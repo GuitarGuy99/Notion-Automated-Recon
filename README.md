@@ -11,7 +11,7 @@ Edit the notion.py script and add your Notion API key under the "Token" variable
 ![image](https://user-images.githubusercontent.com/122157280/211155458-fe4f03a8-3f2d-46d0-8dcc-8c000735dcc0.png)
 ![image](https://user-images.githubusercontent.com/122157280/211155476-ea071657-cc68-4f2f-92b8-6225d693a555.png)
 
-Next we need to add the parent page token of where the writups will be created. This can be found in the URL of the Notion Page:
+Next we need to add the parent page token of where the writups will be created. This can be found in the URL of the Notion Page and will be specific to your notion account:
 
 ![image](https://user-images.githubusercontent.com/122157280/211157411-9e969f7f-c025-458e-9ba2-adfbac83cc13.png)
 
