@@ -4,9 +4,9 @@ import requests
 
 def make_box_page(box_name, nmap_output):
   # Notion API Token
-  TOKEN = "secret_Lvr0IgYzXQP1yrXRAzVmca3DQzG5GefTMZWaBKlg6JQ"
+  TOKEN = "{NOTION_API_KEY_HERE}"
   # Parent page id
-  PARENT = "91c253db90d342fe9f7a44419fbe0481"
+  PARENT = "{PARENT_ID_OF_NOTION_PAGE_HERE}"
 
   url = "https://api.notion.com/v1/pages"
 
