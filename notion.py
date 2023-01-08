@@ -54,7 +54,7 @@ def make_box_page(box_name, nmap_output):
         "rich_text": [{
           "type": "text",
           "text": {
-            "content": nmap_output.replace("\n", "<br />")
+            "content": nmap_output
           }
         }],
         "language":
