@@ -102,10 +102,10 @@ def main(target: str):
     logger.log("-" * 60)
     logger.log("Threader3000 recommends the following Nmap scan:")
     logger.log("*" * 60)
-    logger.log("nmap -p{ports} -sV -sC -T4 -Pn -oA {ip} {ip}".format(
+    logger.log("nmap -p {ports} -sV -sC -T4 -Pn -oA {ip} {ip}".format(
         ports=",".join(discovered_ports), ip=target))
     logger.log("*" * 60)
-    nmap = "nmap -p{ports} -sV -sC -T4 -Pn -oA {ip} {ip}".format(
+    nmap = "nmap -p {ports} -sV -sC -T4 -Pn -oA {ip} {ip}".format(
         ports=",".join(discovered_ports), ip=target)
     t3 = datetime.now()
     total1 = t3 - t1
@@ -130,7 +130,7 @@ def main(target: str):
                     logger.log(nmap)
                     os.mkdir(target)
                     os.chdir(target)
-                    os.system(nmap)
+                    logger.log(os.popen(nmap).read())
                     # convert = "xsltproc "+target+".xml -o "+target+".html"
                     # os.system(convert)
                     t3 = datetime.now()
