@@ -152,8 +152,8 @@ def main(target: str):
 
     automate()
 
-    print("FULL LOG OUTPUT:")
-    print(logger.output())
+    #print("FULL LOG OUTPUT:")
+    #print(logger.output())
 
     return logger.output()
 
