@@ -31,6 +31,13 @@ class Logger():
     def output(self):
         return "\n".join(self.lines)
 
+# XML Parsing
+def Parse_nmap(target: str):
+
+    file = "/".join(__file__.split("/")[:-1]) + f"/{target}/{target}.xml"
+    #print(file)
+    f = open(file, 'r')
+    #print(f.read())
 
 # Main Function
 def main(target: str):
@@ -151,6 +158,7 @@ def main(target: str):
                 automate()
 
     automate()
+    Parse_nmap(target)
 
     #print("FULL LOG OUTPUT:")
     #print(logger.output())
