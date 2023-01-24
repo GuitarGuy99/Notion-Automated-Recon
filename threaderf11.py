@@ -34,10 +34,26 @@ class Logger():
 # XML Parsing
 def Parse_nmap(target: str):
 
+    #file = f'/root/PycharmProjects/Automated-Notion-enum/{target}/{target}.xml'
     file = "/".join(__file__.split("/")[:-1]) + f"/{target}/{target}.xml"
-    #print(file)
+    print(file)
     f = open(file, 'r')
     #print(f.read())
+    xml = ET.parse(file)
+    root= xml.getroot()
+
+    #Debugging stuff
+    
+    #print(root.tag)
+    #print(root.attrib)
+
+    for child in root:
+        print(child.tag, child.attrib)
+
+    #for anon_login in root.iter('service name'):
+        #print(anon_login.attrib)
+
+        #Debugging ends here ...last for statement not working???^^^^
 
 # Main Function
 def main(target: str):
