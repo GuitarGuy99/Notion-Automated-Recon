@@ -30,7 +30,7 @@ class Logger():
     @classmethod
     def output(self):
         return "\n".join(self.lines)
-
+    
 # XML Parsing
 def Parse_nmap(target: str):
 
@@ -42,18 +42,14 @@ def Parse_nmap(target: str):
     xml = ET.parse(file)
     root= xml.getroot()
 
-    #Debugging stuff
-    
     #print(root.tag)
     #print(root.attrib)
 
     for child in root:
         print(child.tag, child.attrib)
 
-    #for anon_login in root.iter('service name'):
-        #print(anon_login.attrib)
-
-        #Debugging ends here ...last for statement not working???^^^^
+    for anon_login in root.iter('service'):
+        print(anon_login.get('name'))
 
 # Main Function
 def main(target: str):
