@@ -12,8 +12,10 @@ import time
 import threading
 import sys
 import subprocess
+import xml.etree.ElementTree as ET
 from queue import Queue
 from datetime import datetime
+
 
 # Start Threader3000 with clear terminal
 subprocess.call('clear', shell=True)
