@@ -36,14 +36,14 @@ class Logger():
 # XML Parsing
 def Parse_nmap(target: str):
 
-    #file = f'/root/PycharmProjects/Automated-Notion-enum/{target}/{target}.xml'
-    file = "/".join(__file__.split("/")[:-1]) + f"/{target}/{target}.xml"
-    print(file)
-    f = open(file, 'r')
+    current_directory = os.getcwd()
+    temp_file_path = os.path.join(current_directory, f"{target}.xml")
+    print(temp_file_path)
+    f = open(temp_file_path, 'r')
     #print(f.read())
-    xml = ET.parse(file)
+    xml = ET.parse(temp_file_path)
     root= xml.getroot()
-
+    
     #print(root.tag)
     #print(root.attrib)
 
